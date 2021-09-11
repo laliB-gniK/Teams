@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+
+<body onload="return loggedUser();">
+    <div id="welcom-user"></div>
+    <div id="logOut">
+        <button onclick="return LogOut();">LogOut</button>
+    </div>
+    <div id="teamOwn">
+        <h1>Team Own</h1>
+        <p id="teamOwnNone">NONE</p>
+        <select name="teamSelect" id="teamSelect" onchange="">
+            <option value="" disabled selected>Manage Team</option>
+        </select>
+
+
+    </div>
+    <div id="teamPart">
+        <h1>Team Part</h1>
+        <p id="teamPartNone">NONE</p>
+        <select name="teamSelect" id="teamSelect1" onchange="">
+            <option value="" disabled selected>Manage Team</option>
+        </select>
+
+    </div>
+    <div class="team-form">
+        <form onsubmit="return true">
+            <label for="teamName">Enter Team Name</label>
+            <input type="text" name="teamName" id="teamName" required><br>
+            <select name="teamCategory" id="teamCategory" required>
+                <option disabled selected value=""> Category</option>
+                <option value="Developer">Developer</option>
+                <option value="Maintainance">Maintainance</option>
+                <option value="Leads">Leads</option>
+            </select><br>
+            <label for="teamMembers">Enter Team Members email (seprated by ",")</label>
+            <input type="text" name="teamMembers" id="teamMembers" required>
+            <br>
+            <input type="submit" value="Add Team" onclick="return addTeam();">
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
